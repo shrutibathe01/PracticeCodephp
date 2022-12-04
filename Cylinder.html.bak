@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cylinder</title>
+</head>
+<body>
+  <form action="Cylinder.php" method="post">
+  Enter the Height of Cylinder:<input type="text" name="height"><br><br>
+  Enter the Radius of Cylinder:<input type="text" name="radius"><br><br>
+  <input type="Submit">
+  </form>
+ </body>
+ </html>

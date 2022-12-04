@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+</head>
+<body>
+   <form method="post" action="A1.php">
+   <input type="text" name="num1" placeholder="First Number"><br>
+   <input type="text" name="num2" placeholder="Second Number"><br>
+   <button type="submit" name="submit">Submit</button>
+   </form>
+</body>
+</html>

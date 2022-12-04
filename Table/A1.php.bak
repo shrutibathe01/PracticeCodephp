@@ -1,0 +1,45 @@
+<?php
+
+$num1=$_POST['num1'];
+$num2=$_POST['num2'];
+
+if($num2=="")
+	validateForm($num1);
+else
+	validateForm($num1,$num2);
+
+function validateForm()
+{
+	$cnt=func_num_args();
+	$num=func_get_arg(0);
+	
+	if($cnt==1)
+	{
+		$f=1;
+		for($i=1;$i<=$num;$i++)
+		{
+			$f=$f*$i;
+		}
+		echo "Factorial of ".$num." is " .$f;
+	}
+	else
+	{
+		$num1=func_get_arg(0);
+		$num2=func_get_arg(1);
+		
+		echo"<table border=2px>";
+		for($i=1;$i<=$num2;$i++)
+		{
+			echo "<tr>";
+			for($j=1;$j<=10;$j++)
+			{
+				echo "<td>";
+				echo " ".$i."*".$j."=".($i*$j);
+				echo "</td>";
+			}
+			echo "</tr>";
+		}
+		echo "</table>";
+	}
+}
+?>

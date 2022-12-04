@@ -1,0 +1,23 @@
+<?php
+
+$Directory=$_POST['dir'];
+$Extension=$_POST['ext'];
+
+if(is_dir($Directory))
+{
+	$FileOpen=opendir($Directory);
+	while(($Read =readdir($FileOpen))!==false)
+		{
+			$e=pathinfo($Read,PATHINFO_EXTENSION);
+			if($e==$Extension)
+			{
+				echo "<b>$Read</b>";
+			}
+		}
+		closedir($FileOpen);
+}
+else
+{
+ echo "<h1>Directory Not Found </h1>";
+}
+?>
